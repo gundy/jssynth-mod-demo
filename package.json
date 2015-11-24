@@ -6,9 +6,7 @@
   },
   "jspm": {
     "directories": {
-      "baseURL": "dist",
-      "lib": "src",
-      "packages": "jspm_packages"
+      "lib": "src"
     },
     "configFile": "system.config.js",
     "dependencies": {
