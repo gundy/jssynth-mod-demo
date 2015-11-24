@@ -1,0 +1,32 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "jspm": "^0.15.1"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "dist",
+      "lib": "src",
+      "packages": "jspm_packages"
+    },
+    "configFile": "system.config.js",
+    "dependencies": {
+      "css": "github:systemjs/plugin-css@^0.1.6",
+      "gundy/jssynth": "github:gundy/jssynth@master",
+      "gundy/jssynth-mod": "github:gundy/jssynth-mod@master",
+      "json": "github:systemjs/plugin-json@^0.1.0",
+      "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
+      "react": "npm:react@^0.13.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel@^4.7.16",
+      "babel-runtime": "npm:babel-runtime@^4.7.16",
+      "core-js": "npm:core-js@^0.9.4"
+    }
+  },
+  "scripts": {
+    "postinstall": "jspm install",
+    "test": "gulp recompile && ./node_modules/gulp-helpers/node_modules/karma/bin/karma start --single-run --browsers PhantomJS"
+  }
+}
