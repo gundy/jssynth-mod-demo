@@ -6,13 +6,16 @@ import {Mixer} from 'gundy/jssynth'
 import {WebAudioDriver} from 'gundy/jssynth'
 import {Player} from 'gundy/jssynth-mod'
 import {MODLoader} from 'gundy/jssynth-mod';
+import {S3MLoader} from 'gundy/jssynth-mod';
 import {PatternViewModelBuilder} from './PatternViewModelBuilder'
 
-import modFile from '../data/mods/ode2ptk.mod'
+//import modFile from '../data/mods/ode2ptk.mod'
+import s3mFile from '../data/s3ms/2ND_PM.s3m'
 
-window.song = MODLoader.readMODfile(modFile);
+//window.song = MODLoader.readMODfile(modFile);
+window.song = S3MLoader.readS3Mfile(s3mFile);
 
-window.mixer = new Mixer({numChannels: 8 /* 4 for music, 4 for effects */ });
+window.mixer = new Mixer({numChannels: 8 /* all 8 channels for music */ });
 window.player = new Player(window.mixer);
 window.player.setSong(window.song);
 window.audioOut = new WebAudioDriver(window.mixer, 4096);  /* 4096/8192/.. = buffer size */
