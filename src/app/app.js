@@ -12,7 +12,7 @@ import modFile from '../data/mods/ode2ptk.mod'
 
 window.song = MODLoader.readMODfile(modFile);
 
-window.mixer = new Mixer({numChannels: 16 /* 10 for music, 2 for effects */ });
+window.mixer = new Mixer({numChannels: 8 /* 4 for music, 4 for effects */ });
 window.player = new Player(window.mixer);
 window.player.setSong(window.song);
 window.audioOut = new WebAudioDriver(window.mixer, 4096);  /* 4096/8192/.. = buffer size */
