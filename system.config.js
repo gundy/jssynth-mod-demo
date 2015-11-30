@@ -19,8 +19,8 @@ System.config({
 
 System.config({
   "map": {
-    "babel": "npm:babel@4.7.16",
-    "babel-runtime": "npm:babel-runtime@4.7.16",
+    "babel": "npm:babel-core@5.8.34",
+    "babel-runtime": "npm:babel-runtime@5.8.34",
     "core-js": "npm:core-js@0.9.18",
     "css": "github:systemjs/plugin-css@0.1.19",
     "gundy/jssynth": "github:gundy/jssynth@master",
@@ -94,6 +94,9 @@ System.config({
       "util": "npm:util@0.10.3"
     },
     "npm:babel-runtime@4.7.16": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:babel-runtime@5.8.34": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:brace-expansion@1.1.1": {
